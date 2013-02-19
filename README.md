@@ -1,10 +1,10 @@
 # Node Shannon Entropy
 
-Shannon Entropy calculation to measure the information gain of an array of objects (i.e. average unpredictability in a random variable) in bits.
+[Shannon entropy](http://en.wikipedia.org/wiki/Entropy_(information_theory) calculation to measure the information gain of an array of objects (i.e. average unpredictability in a random variable) in bits.
 
 The algorithm is based on the equation
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=H%28X%29%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5Cmathcal%7BX%7D%7D%20p%28x%29%20%5Clog_b%20p%28x%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](http://schuch.me/github/node-entropy/entropy_equation.png "Shannon Entropy Equation")
 
 ## Installation
 
