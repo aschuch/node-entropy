@@ -2,9 +2,9 @@
 
 Shannon Entropy calculation to measure the information gain of an array of objects (i.e. average unpredictability in a random variable) in bits.
 
-The algorithm is based on the formula
+The algorithm is based on the equation
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=H%28X%29%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5Cmathcal%7BX%7D%7D%20p%28x%29%20%5Clog_2%20p%28x%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](http://www.sciweavers.org/tex2img.php?eq=H%28X%29%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5Cmathcal%7BX%7D%7D%20p%28x%29%20%5Clog_b%20p%28x%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 ## Installation
 
@@ -14,36 +14,35 @@ $ npm install entropy
 
 ## Usage
 
-```
+```javascript
 var entropy = require('entropy');
-
 entropy.calculateEntropy(items, columns, function(entropy) {
 	console.log(entropy);
 });
 ```
 
-```items``` is an array of objects on which the entropy algorythm is performed. The ```columns``` array includes all the keys of the object the entropy should be calculated of. 
+```items``` is an array of objects on which the entropy algorythm is performed. The ```columns``` array includes all the keys of the object the entropy should be calculated of. The callback returns an object containing each key defined in the ```columns``` array and the value of the calculated entropy in bits.
 
 ### Example
 
 ```javascript
 var entropy = require('entropy');
-
+  
 var items = [
-    {
-      name: "Alex",
-      email: "hello@example.com",
-      year: 1980
+	{
+    	name: "Alex",
+   		email: "hello@example.com",
+   		year: 1980
     }, {
-      name: "Peter",
-      email: "peter@example.com",
-      year: 1990
+    	name: "Peter",
+      	email: "peter@example.com",
+      	year: 1990
     }, {
-      name: "Bob",
-      email: "bob@example.com",
-      year: 2000
+      	name: "Bob",
+      	email: "bob@example.com",
+      	year: 2000
     }
-  ];
+];
 
 var columns = ["name", "email", "year"];
 
@@ -64,11 +63,13 @@ The entropy of each property in bits.
 }
 ```
 
-
 ## Tests
 
 ```
 $ npm test
+
+{ name: 4.754887502163468, email: 2.7548875021634687, year: 0 }
+All tests OK
 ```
 
 ## Contributing
