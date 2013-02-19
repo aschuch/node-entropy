@@ -1,4 +1,4 @@
-# node-entropy
+# Node Shannon Entropy
 
 Shannon Entropy calculation to measure the information gain of an array of objects (i.e. average unpredictability in a random variable) in bits.
 
@@ -9,13 +9,13 @@ The algorithm is based on the equation
 ## Installation
 
 ```
-$ npm install entropy
+$ npm install shannon-entropy
 ```
 
 ## Usage
 
 ```javascript
-var entropy = require('entropy');
+var entropy = require('shannon-entropy');
 entropy.calculateEntropy(items, columns, function(entropy) {
 	console.log(entropy);
 });
@@ -26,14 +26,15 @@ entropy.calculateEntropy(items, columns, function(entropy) {
 ### Example
 
 ```javascript
-var entropy = require('entropy');
+var entropy = require('shannon-entropy');
   
 var items = [
 	{
     	name: "Alex",
    		email: "hello@example.com",
    		year: 1980
-    }, {
+    }, 
+    {
     	name: "Peter",
       	email: "peter@example.com",
       	year: 1990
