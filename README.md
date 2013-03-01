@@ -8,7 +8,7 @@ The algorithm is based on the equation
 
 ## Installation
 
-```
+```bash
 $ npm install shannon-entropy
 ```
 
@@ -21,7 +21,7 @@ entropy.calculateEntropy(items, columns, function(entropy) {
 });
 ```
 
-```items``` is an array of objects on which the entropy algorythm is performed. The ```columns``` array includes all the keys of the object the entropy should be calculated of. The callback returns an object containing each key defined in the ```columns``` array and the value of the calculated entropy in bits.
+```items``` is an array of objects on which the entropy algorithm is performed. The ```columns``` array includes all the keys of the object the entropy should be calculated of. The callback returns an object containing each key defined in the ```columns``` array and the value of the calculated entropy in bits.
 
 ### Example
 
@@ -66,7 +66,7 @@ The entropy of each property in bits.
 
 ## Tests
 
-```
+```bash
 $ npm test
 
 { name: 4.754887502163468, email: 2.7548875021634687, year: 0 }
