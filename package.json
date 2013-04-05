@@ -25,7 +25,10 @@
     "entropy",
     "shannon",
     "statistic",
-    "information gain"
+    "statistics",
+    "information gain",
+    "prediction",
+    "bits"
   ],
   "license": "MIT"
 }
