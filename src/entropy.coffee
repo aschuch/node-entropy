@@ -33,13 +33,14 @@ entropyOfColumn = (items, column) ->
   distinct = distinctValuesOfColumn(items, column)
 
   total = items.length
-  
+
   sumEntropy = 0
   for key of distinct
     count = distinct[key]
     sumEntropy += entropy(count, total)
 
-  (-sumEntropy)*total
+  #(-sumEntropy)*total
+  -sumEntropy
 
 # //////////////////////////////////////
 
@@ -58,7 +59,7 @@ distinctValuesOfColumn = (items, column) ->
       distinct[value] = distinct[value] + 1
     else
       distinct[value] = 1
-    
+
     i++
 
   distinct
