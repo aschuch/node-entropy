@@ -88,6 +88,28 @@ entropy.calculateEntropy items, ["name", "email", "year"], (entropy) ->
 # //////////////////////////////////////
 
 #
+# Array
+#
+items = [
+  name: "Alex"
+  email: ["hello@example.com", "bob@example.com"]
+  year: 1980
+,
+  name: "Peter"
+  email: ["hello@example.com", "bob@example.com"]
+  year: 1980
+,
+  name: "Bob"
+  email: ["hello@example.com", "bob@example.com"]
+  year: 1980
+]
+
+entropy.calculateEntropy items, ["name", "email", "year"], (entropy) ->
+  entropy.email.should.equal(0)
+
+# //////////////////////////////////////
+
+#
 # All unequal
 #
 items = [
