@@ -55,6 +55,9 @@ distinctValuesOfColumn = (items, column) ->
     item = items[i]
     value = item[column]
 
+    if value instanceof Array
+      value = value.join("|")
+
     if typeof (distinct[value]) isnt "undefined"
       distinct[value] = distinct[value] + 1
     else
